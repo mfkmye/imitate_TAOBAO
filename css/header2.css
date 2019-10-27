@@ -1,0 +1,128 @@
+.superbanner-inner {
+    overflow: hidden;
+    height: 100px;
+    width: 1190px;
+    margin: 0 auto;
+    min-width: 1190px;
+    position: relative;
+}
+
+.top-body {
+    background-color: #d10757;
+}
+
+.logo {
+    display: inline-block;
+    float: left;
+    padding: 10px 10px 10px 15px;
+}
+
+.logo>img {
+    width: 80px;
+    height: 80px;
+    display: block;
+}
+
+.list {
+    width: 1085px;
+    margin-top: 13px;
+    font-size: 0px;
+    display: inline-block;
+}
+
+.list>.item {
+    width: 209px;
+    height: 75px;
+    margin-right: 10px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+}
+
+.list>.item:last-of-type {
+    margin-right: 0;
+}
+
+.item:nth-of-type(1) {
+    /* background-image: url(../img/top-5-1.png); */
+    background-image: url(../img/top-5-1.png);
+}
+
+.item:nth-of-type(2) {
+    background-image: url(../img/top-5-2.png);
+}
+
+.item:nth-of-type(3) {
+    background-image: url(../img/top-5-3.png);
+}
+
+.item:nth-of-type(4) {
+    background-image: url(../img/top-5-4.png);
+}
+
+.item:nth-of-type(5) {
+    background-image: url(../img/top-5-5.png);
+}
+
+.desc-wrapper {
+    margin-left: 20px;
+    margin-top: 12px;
+}
+
+.desc-wrapper>.title,
+.desc-wrapper>.subtitle {
+    color: #fff;
+    width: 90px;
+    /* overflow: hidden; */
+}
+
+.desc-wrapper>.title {
+    line-height: 28px;
+    height: 28px;
+    font-size: 20px;
+}
+
+.desc-wrapper>.subtitle {
+    line-height: 20px;
+    height: 16px;
+    font-size: 14px;
+}
+
+.list>.item>div.item_img {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    background-size: 52px 52px;
+    top: 12px;
+    right: 14px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-clip: padding-box;
+    background-repeat: no-repeat;
+}
+
+.list>.item:nth-of-type(1)>div.item_img {
+    /* background-image: url(../img/top-5-1.webp); */
+    background-image: url(../img/top-5-1.jpg);
+}
+
+.list>.item:nth-of-type(2)>div.item_img {
+    background-image: url(../img/top-5-2.jpg);
+}
+
+.list>.item:nth-of-type(3)>div.item_img {
+    background-image: url(../img/top-5-3.jpg);
+}
+
+.list>.item:nth-of-type(4)>div.item_img {
+    background-image: url(../img/top-5-4.jpg);
+}
+
+.list>.item:nth-of-type(5)>div.item_img {
+    background-image: url(../img/top-5-5.jpg);
+}
+
+.top .J_Moudle {
+    height: 10px;
+}

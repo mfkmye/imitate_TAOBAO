@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .carousel-wrap * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .carousel-wrap {
+            font-size: 0;
+            position: relative;
+            width: 520px;
+            height: 201px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .slide-ul {
+            width: 100%;
+            height: 100%;
+            font-size: 0;
+        }
+
+        .slide-ul li {
+            position: absolute;
+        }
+
+        .slide-ul li>img {
+            margin-top: 6px;
+            width: 251px;
+            height: 190px;
+            overflow: hidden;
+            margin-left: 6px;
+        }
+
+        .slide-ul li:first-of-type>img {
+            border-color: #ebebeb;
+            float: left;
+            width: 129px;
+            height: 57px;
+            text-align: center;
+            border: 0;
+            padding: 5px 0;
+            border-right: 1px solid #ebebeb;
+            border-bottom: 1px solid #ebebeb;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .slide-ul img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-items {
+            position: absolute;
+            z-index: 10;
+            top: 135px;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 0;
+        }
+
+        .carousel-items .active {
+            background-color: rgb(216, 40, 40);
+        }
+
+        .carousel-items span {
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            border-radius: 5px;
+            margin: 0 3px;
+            background-color: #b2b2b2;
+            cursor: pointer;
+        }
+
+        .list-enter-to {
+            transition: all 1s ease;
+            transform: translateX(0);
+        }
+
+        .list-leave-active {
+            transition: all 1s ease;
+            transform: translateX(-100%)
+        }
+
+        .list-enter {
+            transform: translateX(100%)
+        }
+
+        .list-leave {
+            transform: translateX(0)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carousel-wrap" id="carousel">
+        <transition-group tag="ul" :name="transition" class='slide-ul'>
+            <li v-for="(item, index) in list" :key="index" :_key="index" v-show="index === currentIndex">
+                <template v-for="(item_2, index_2) in item.imgs">
+                    <img :src="item_2" :key="`${index}_${index_2}`" :_key="`${index}_${index_2}`" />
+                </template>
+            </li>
+        </transition-group>
+        <div class="carousel-items">
+            <span v-for="(item,index) in list.length" :class="{'active':index===currentIndex}"></span>
+        </div>
+    </div>
+
+    <script>
+        var myCarousel = new Vue({
+            el: '#carousel',
+            data: {
+                list: [{
+                    number: 12,
+                    imgs: ['./img2/image120.gif', './img2/image121.jpg', './img2/image122.jpg',
+                        './img2/image123.png',
+                        './img2/image124.png', './img2/image125.png', './img2/image126.png',
+                        './img2/image127.png',
+                        './img2/image128.png', './img2/image129.png', './img2/image130.png',
+                        './img2/image131.png'
+                    ]
+                }, {
+                    number: 2,
+                    imgs: ['./img2/image058.jpg', './img2/image059.jpg']
+                }, {
+                    number: 2,
+                    imgs: ['./img2/image060.jpg', './img2/image061.jpg']
+                }, {
+                    number: 2,
+                    imgs: ['./img2/image062.jpg', './img2/image063.jpg']
+                }, {
+                    number: 2,
+                    imgs: ['./img2/image064.jpg', './img2/image065.jpg']
+                }, {
+                    number: 2,
+                    imgs: ['./img2/image066.jpg', './img2/image067.jpg']
+                }],
+                currentIndex: 0,
+                timer: '',
+                transition: "list",
+            },
+            methods: {
+                go: function () { //定时轮播
+                    this.timer = setInterval(() => {
+                        this.autoPlay()
+                    }, 4000)
+                },
+                stop: function () { //暂停播放
+                    clearInterval(this.timer)
+                    this.timer = null
+                },
+                autoPlay: function () { //下一个
+                    this.transition = "list";
+                    this.currentIndex++
+                    if (this.currentIndex > this.list.length - 1) {
+                        this.currentIndex = 0
+
+                    }
+                },
+                left: function () { //向左滑动
+                    this.stop();
+                    this.autoPlay();
+                    this.go();
+                },
+                right: function () { //向右滑动
+                    this.transition = "list2";
+                    this.stop();
+                    this.currentIndex--;
+                    if (this.currentIndex < 0) {
+                        this.currentIndex = this.list.length - 1
+                    }
+                    this.go();
+
+                }
+            },
+            created: function () {
+                this.$nextTick(function () { //启动轮播图
+                    myCarousel.timer = setInterval(function () {
+                        myCarousel.autoPlay()
+                    }, 4000);
+                })
+            }
+        });
+    </script>
+</body>
+
+</html>

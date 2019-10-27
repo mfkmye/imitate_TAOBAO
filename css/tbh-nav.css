@@ -1,0 +1,63 @@
+.tbh-nav {
+    width: 1190px;
+    margin: 0 auto;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    color: #fff;
+    background-image: linear-gradient(to right, #ff9000 0, #ff5000 100%);
+    background-repeat: repeat-x;
+}
+
+.tbh-nav>h2 {
+    float: left;
+    width: 190px;
+    text-align: center;
+    font-size: 16px;
+    background: #ff5000;
+}
+
+.tbh-nav>ul {
+    float: left;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.tbh-nav>ul>li {
+    font-size: 14px;
+    float: left;
+    text-align: center;
+    margin-left: 7px;
+    padding: 0 5px;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    position: relative;
+}
+
+.tbh-nav>ul>li:not(.pipe):hover::before {
+    content: "";
+    font-family: iconfont;
+    color: #ff5000;
+    top: -14px;
+    position: absolute;
+    left: 50%;
+    font-size: 12px;
+    margin-left: -15px;
+    display: inline-block;
+    width: 24px;
+    height: 16px;
+    background: url(../img/li_before_icon.png) no-repeat center center / 24px 16px;
+}
+
+.tbh-nav>ul>li:nth-of-type(1),
+.tbh-nav>ul>li:nth-of-type(2),
+.tbh-nav>ul>li:nth-of-type(3) {
+    font-size: 16px;
+    margin: 0 3px;
+    padding: 0 9px;
+}
+
+.tbh-nav>ul>li.pipe {
+    padding: 0;
+}

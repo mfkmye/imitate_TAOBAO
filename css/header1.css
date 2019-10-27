@@ -1,0 +1,164 @@
+body>.top {
+    z-index: 10000;
+    width: 100%;
+    background-color: #f5f5f5;
+    font-size: 0;
+}
+
+.top li {
+    font-size: 12px;
+}
+
+.top .top-nav-menu-hd,
+.top .top-nav-menu-bd {
+    font-size: 12px;
+}
+
+.top-nav {
+    margin: 0 auto;
+    width: 1190px;
+    height: 35px;
+    background: #f5f5f5;
+    /* line-height: 35px; */
+    border-bottom: 1px solid #eee;
+}
+
+.top-nav>ul>li {
+    padding: 0 6px;
+}
+
+.top-nav-menu-hd {
+    display: inline-block;
+    height: 35px;
+}
+
+.top-nav-menu-sign>a {
+    margin-right: 7px;
+}
+
+.top-nav>ul>li img {
+    width: 12px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.top-nav-bd-l {
+    float: left;
+}
+
+.top-nav-bd-l>li {
+    float: left;
+}
+
+.top-nav-bd-r {
+    float: right;
+}
+
+.top-nav-bd-r>li {
+    float: left;
+}
+
+.top-nav-bd-r>li:hover>* {
+    color: #f22e00;
+}
+
+.top-nav-menu {
+    z-index: 10001;
+    position: relative;
+    background-color: #f5f5f5;
+}
+
+.top-nav-menu:hover {
+    background-color: #fff;
+}
+
+.top-nav-menu-bd {
+    display: none;
+    cursor: pointer;
+    max-height: 270px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 35px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.top-nav-menu-hd a,
+.top-nav-menu-hd span {
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+}
+
+.mini_icon {
+    display: inline-block;
+    width: 12px;
+    height: 35px;
+    vertical-align: middle;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 12px auto;
+}
+
+.down_arrow {
+    background-image: url('../img/down_arrow.png');
+}
+
+.top-nav-menu:hover .down_arrow {
+    background-image: url('../img/down_arrow_hover.png');
+}
+
+.mini_car {
+    background-image: url('../img/MiniCart.png');
+}
+
+.top-nav-menu:hover .mini_car {
+    background-image: url('../img/MiniCart_hover.png');
+}
+
+.mini_star {
+    background-image: url('../img/star.png');
+}
+
+.top-nav-menu-hd:hover .mini_star {
+    background-image: url('../img/star_hover.png') !important;
+}
+
+.top-nav-menu:hover .mini_star {
+    background-image: url('../img/star_hover2.png');
+}
+
+.top-nav-bd-l .top-nav-menu-bd>li {
+    width: 242px;
+    padding-left: 6px;
+}
+
+div.top-nav-menu-bd>a {
+    display: block;
+    padding: 0px 6px 0 6px;
+    line-height: 29px;
+}
+
+div.top-nav-menu-bd>a:hover {
+    color: #6C6C6C;
+}
+
+.top-nav-menu-bd>li {
+    height: 29px;
+    line-height: 29px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.top-nav-menu:hover .top-nav-menu-bd {
+    display: block;
+    background-color: #fff;
+}
+
+.top-nav-menu-bd>li:hover,
+.top-nav-menu-bd>a:hover {
+    background-color: rgb(244, 244, 244);
+}
+
+/* -------------------------------------------------------------------- */

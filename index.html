@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 全局样式 -->
+    <link rel="stylesheet" href="./css/all.css">
+    <!-- 顶部样式 -->
+    <link rel="stylesheet" href="./css/header1.css">
+    <link rel="stylesheet" href="./css/header2.css">
+    <link rel="stylesheet" href="./css/cup.css">
+    <!-- 中单导航样式 -->
+    <link rel="stylesheet" href="./css/tbh-nav.css">
+    <!-- 主体1样式 -->
+    <link rel="stylesheet" href="./css/screen-outer.css">
+    <!-- 主体2样式-->
+    <script src="./js/vue.js"></script>
+    <link rel="stylesheet" href="./css/vue_carousel.css">
+    <!-- 底部样式 -->
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+
+<body>
+    <div class="top">
+        <div class="top-nav clearfix">
+            <ul class="top-nav-bd-l">
+                <li class="top-nav-menu clearfix">
+                    <div class="top-nav-menu-hd">
+                        <span>中国大陆</span>
+                        <span class="mini_icon down_arrow"></span>
+                    </div>
+                    <ul class="top-nav-menu-bd scroll_y">
+                        <li>全球</li>
+                        <li>中国大陆</li>
+                        <li>中国香港</li>
+                        <li>中国台湾</li>
+                        <li>中国澳门</li>
+                        <li>韩国</li>
+                        <li>马来西亚</li>
+                        <li>澳大利亚</li>
+                        <li>新加坡</li>
+                        <li>新西兰</li>
+                        <li>加拿大</li>
+                        <li>美国</li>
+                        <li>日本</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="top-nav-menu-hd">
+                        <div class="top-nav-menu-sign">
+                            <a class="a_read" href="#">亲，请登录</a>
+                            <a href="#">免费注册</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="top-nav-menu-hd">
+                        <a href="#">手机逛淘宝</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="top-nav-bd-r">
+                <li class="top-nav-menu">
+                    <div class="top-nav-menu-hd">
+                        <a href="#">我的淘宝</a>
+                        <span class="mini_icon down_arrow"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="top-nav-menu-hd">
+                        <span class="mini_icon mini_car"></span>
+                        <a href="#">购物车
+                            <span style="color: #f22e00!important;font-weight:700;">0</span>
+                            <span class="mini_icon down_arrow"></span>
+                        </a>
+                    </div>
+                </li>
+                <li class="top-nav-menu">
+                    <div class="top-nav-menu-hd">
+                        <span class="mini_icon mini_star"></span>
+                        <a href="#">收藏夹</a>
+                        <span class="mini_icon down_arrow"></span>
+                    </div>
+                    <div class="top-nav-menu-bd">
+                        <a>收藏的宝贝</a>
+                        <a>收藏的店铺</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="top-nav-menu-hd">
+                        <a href="#">商品分类</a>
+                    </div>
+                </li>
+                <li class="top-nav-menu clearfix">
+                    <div class="top-nav-menu-hd">
+                        <a class="textarea" href="#">千牛卖家中心</a>
+                        <span class="mini_icon down_arrow"></span>
+                    </div>
+                    <div class="top-nav-menu-bd">
+                        <a>免费开店</a>
+                        <a>已卖出的宝贝</a>
+                        <a>出售中的宝贝</a>
+                        <a>卖家服务市场</a>
+                        <a>卖家培训中心</a>
+                        <a>体检中心</a>
+                        <a>问商友</a>
+                    </div>
+                </li>
+                <li class="top-nav-menu">
+                    <div class="top-nav-menu-hd">
+                        <a href="#">联系客服</a>
+                        <span class="mini_icon down_arrow"></span>
+                    </div>
+                </li>
+                <li class="top-nav-menu">
+                    <div class="top-nav-menu-hd">
+                        <a href="#">网站导航</a>
+                        <span class="mini_icon down_arrow"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="top-body clearfix">
+            <div class="superbanner-inner">
+                <a class="logo inline">
+                    <img src="./img/double11.png" alt="天猫">
+                </a>
+                <div class="list inline" data-spm-ab="taobao">
+                    <a href="#" class="inline-block item">
+                        <div class="desc-wrapper">
+                            <h4 class="title">箱包服配</h4>
+                            <p class="subtitle">奢品1折起</p>
+                        </div>
+                        <div class="item_img"></div>
+                    </a>
+                    <a href="#" class="inline-block item">
+                        <div class="desc-wrapper">
+                            <h4 class="title">品牌好车</h4>
+                            <p class="subtitle">大额券抵首付</p>
+                        </div>
+                        <div class="item_img"></div>
+                    </a>
+                    <a href="#" class="inline-block item">
+                        <div class="desc-wrapper">
+                            <h4 class="title">图书音像</h4>
+                            <p class="subtitle">好书不只五折</p>
+                        </div>
+                        <div class="item_img"></div>
+                    </a>
+                    <a href="#" class="inline-block item">
+                        <div class="desc-wrapper">
+                            <h4 class="title">婴童尿裤</h4>
+                            <p class="subtitle">送百万猫超卡</p>
+                        </div>
+                        <div class="item_img"></div>
+                    </a>
+                    <a href="#" class="inline-block item">
+                        <div class="desc-wrapper">
+                            <h4 class="title">运动大牌</h4>
+                            <p class="subtitle">阿迪低至4折</p>
+                        </div>
+                        <div class="item_img"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="J_Moudle clearfix"></div>
+    </div>
+    <div class="body_center">
+        <div class="cup">
+            <div class="top">
+                <div class="wrap">
+                    <div class="c_t_w_logo">
+                        <div class="logo"></div>
+                    </div>
+                    <div class="c_t_w_search">
+                        <div class="c_t_w_s_box">
+                            <div class="top">
+                                <ul class="search_tab">
+                                    <li class="selected">宝贝</li>
+                                    <li>天猫</li>
+                                    <li>店铺</li>
+                                </ul>
+                            </div>
+                            <div class="center">
+                                <form action="#" class="search_panel">
+                                    <button class="btn_search">搜索</button>
+                                    <div class="search-common-panel">
+                                        <div class="search-combox">
+                                            <input class="search_input" type="text">
+                                            <div class="search_icon_box">
+                                                <span class="search_text">毛线开衫女外套春秋</span>
+                                            </div>
+                                        </div>
+                                        <div class="camera"></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <div class="search_host_fline">
+                                <a>新款连衣裙</a>
+                                <a>四件套</a>
+                                <a class="a_read">潮流T恤</a>
+                                <a>时尚女鞋</a>
+                                <a>短裤</a>
+                                <a>半身裙</a>
+                                <a>男士外套</a>
+                                <a>墙纸</a>
+                                <a>行车记录仪</a>
+                                <a>新款男鞋</a>
+                                <a>耳机</a>
+                                <a>时尚女包</a>
+                                <a>沙发</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c_t_w_code">
+                        <div class="c_t_w_c_qr">
+                            <div class="qr_bd">
+                                <span>手机淘宝</span>
+                                <img src="./img/qr_code.png" alt="淘宝二维码">
+                            </div>
+                            <div class="qr_exit">×</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tbh-nav">
+            <h2>主题市场</h2>
+            <ul class="h_list">
+                <li>天猫</li>
+                <li>聚划算</li>
+                <li>天猫超市</li>
+                <li class="pipe">|</li>
+                <li>淘抢购</li>
+                <li>电器城</li>
+                <li>司法拍卖</li>
+                <li>淘宝心选</li>
+                <li>兴农扶贫</li>
+                <li class="pipe">|</li>
+                <li>飞猪旅行</li>
+                <li>智能生活</li>
+                <li>苏宁易购</li>
+            </ul>
+        </div>
+        <div class="screen-outer clearfix">
+            <div class="main fl">
+                <div class="main_inner clearfix">
+                    <div class="tbh-service">
+                        <div class="service">
+                            <div class="service-bd">
+                                <li><a>女装</a> / <a>男装</a> / <a>内衣</a></li>
+                                <li><a>鞋靴</a> / <a>箱包</a> / <a>配件</a></li>
+                                <li><a>童装玩具</a> / <a>孕产</a> / <a>用品</a></li>
+                                <li><a>家电</a> / <a>数码</a> / <a>手机</a></li>
+                                <li><a>美妆</a> / <a>洗护</a> / <a>保健品</a></li>
+                                <li><a>珠宝</a> / <a> 眼镜</a> / <a>手表</a></li>
+                                <li><a>运动</a> / <a> 户外</a> / <a>乐器</a></li>
+                                <li><a>游戏</a> / <a> 动漫</a> / <a>影视</a></li>
+                                <li><a>美食</a> / <a> 生鲜</a> / <a>零食</a></li>
+                                <li><a>鲜花</a> / <a> 宠物</a> / <a>农资</a></li>
+                                <li><a>工具</a> / <a> 装修</a> / <a>建材</a></li>
+                                <li><a>家具</a> / <a> 家饰</a> / <a>家纺</a></li>
+                                <li><a>汽车</a> / <a>二手车</a> / <a>用品</a></li>
+                                <li><a>办公</a> / <a>DIY</a> / <a>五金电子</a></li>
+                                <li><a>百货</a> / <a>餐厨</a> / <a>家庭保健</a></li>
+                                <li><a>学习</a> / <a>卡券</a> / <a>本地服务</a></li>
+                            </div>
+                            <div class="service-float"></div>
+                        </div>
+                    </div>
+                    <div class="core">
+                        <div class="c_t">
+                            <div class="promo">
+                                <div class="promo-bd" style="position: absolute; left: -520px; top: 0;">
+                                    <img src="./img/image112.jpg">
+                                    <img src="./img/image113.jpg">
+                                    <img src="./img/image114.jpg">
+                                    <img src="./img/image115.jpg">
+                                    <img src="./img/image116.jpg">
+                                </div>
+                                <div class="promo-ft">
+                                    <div class="promo-opt">
+                                        <a class="prev">
+                                            <span class="s-prev">&lt;</span>
+                                        </a>
+                                        <a class="next">
+                                            <span class="s-next">&gt;</span>
+                                        </a>
+                                    </div>
+                                    <ul class="promo-nav">
+                                        <li class=""></li>
+                                        <li class=""></li>
+                                        <li class=""></li>
+                                        <li class=""></li>
+                                        <li class=""></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c_b">
+                            <div class="carousel-wrap" id="carousel">
+                                <div>
+                                    <transition-group tag="ul" :name="transition" class='slide-ul'>
+                                        <li v-for="(item, index) in list" :key="index" :_key="index"
+                                            v-show="index === currentIndex">
+                                            <template v-for="(item_2, index_2) in item.imgs">
+                                                <img :src="item_2" :key="`${index}_${index_2}`"
+                                                    :_key="`${index}_${index_2}`" />
+                                            </template>
+                                        </li>
+                                    </transition-group>
+                                </div>
+                                <div class="carousel-items">
+                                    <div>
+                                        <span></span>
+                                        <span>理想生活上天猫</span>
+                                        <span><span>{{currentIndex+1}}</span>/6</span>
+                                    </div>
+                                    <span v-for="(item,index) in list.length"
+                                        :class="{'active':index===currentIndex}"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sub-column">
+                        <div>
+                            <a>
+                                <img src="./img/fudingjing.jpg" style="width: 160px;height: 280px;">
+                            </a>
+                        </div>
+                        <div>
+                            <h5>今日热卖</h5>
+                            <img src="./img/miaojie.jpg" style="width: 160px;height: 200px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col_right fr">
+                <div class="tbh-membedr">
+                    <div class="member">
+                        <div class="member-bd">
+                            <div class="avatar-wrapper">
+                                <div class="avatar-icon"></div>
+                            </div>
+                            <span class="member-nick-info">
+                                Hi! <strong>some one</strong>
+                            </span>
+                            <p class="member-tjb">
+                                <a class="J_MemberPunch h">
+                                    <span class="tbh-icon"></span>领淘金币抵钱
+                                </a>
+                                <a class="J_MemberClub h">
+                                    <span class="tbh-icon"></span>会员俱乐部
+                                </a>
+                            </p>
+                        </div>
+                        <div class="member-ft h">
+                            <a>
+                                <strong>3</strong>待收货
+                            </a>
+                            <a>
+                                <strong>0</strong>待发货
+                            </a>
+                            <a>
+                                <strong>0</strong>待付款
+                            </a>
+                            <a>
+                                <strong>3</strong>待评价
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tbh-tipoff">
+                    <a>网上有害信息举报专区<span class="triangle"></span></a>
+                </div>
+                <div class="tbh-notice">
+                    <ul class="notice-hd">
+                        <li class="selected">公告</li>
+                        <li>规则</li>
+                        <li>论坛</li>
+                        <li>安全</li>
+                        <li>公益</li>
+                    </ul>
+                    <div class="notice-bd">
+                        <ul class="mode selected">
+                            <li class="h">95公益周阿里、腾讯等六家公司同台联合做公益</li>
+                            <li>淘宝造物节之城市秘密</li>
+                            <li>聚划算88红包省钱卡</li>
+                        </ul>
+                        <ul class="mode">
+                            <li>新增《淘宝网汽配行业管理规范》公示通知</li>
+                            <li>《淘宝网区域零售服务说明》变更公示通知</li>
+                            <li>《淘宝网票务行业管理规范》变更公示通知</li>
+                            <li>《淘宝网数字娱乐市场须提供官方授权的商品目录》变更公示通知</li>
+                        </ul>
+                        <ul class="mode">
+                            <li>淘宝嘉年华招商</li>
+                            <li>在线职业培训招商</li>
+                            <li>金秋超值购招商</li>
+                            <li>运营神器年中大促</li>
+                        </ul>
+                        <ul class="mode">
+                            <li class="h">魔豆妈妈公益项目</li>
+                            <li class="h">让母爱永不打烊！</li>
+                            <li>卖家注意：风险通报！</li>
+                            <li>售假获刑又起诉！</li>
+                        </ul>
+                        <ul class="mode">
+                            <li class="h">淘宝公益平台正式更名</li>
+                            <li class="h">益起来商家招募即将截止</li>
+                            <li>卖家如何设置公益宝贝</li>
+                            <li>公益机构开店全攻略</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tbh-conve">
+                    <ul class="conve-lise">
+                        <li class="mod">
+                            <span></span>
+                            <p>充话费</p>
+                        </li>
+                        <li class="mod">
+                            <span></span>
+                            <p>旅行</p>
+                        </li>
+                        <li class="mod">
+                            <span></span>
+                            <p>车险</p>
+                        </li>
+                        <li class="mod">
+                            <span></span>
+                            <p>游戏</p>
+                        </li>
+                        <li class="mod">
+                            <span></span>
+                            <p>彩票</p>
+                        </li>
+                        <li class="mod">
+                            <span></span>
+                            <p>电影</p>
+                        </li>
+                        <li class="mod">
+                            <span></span>
+                            <p>酒店</p>
+                        </li>
+                        <li class="mod">
+                            <span></span>
+                            <p>理财</p>
+                        </li>
+                    </ul>
+                    <ul class="conve-bd-box">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li class="conve-bd-box-exit">×</li>
+                    </ul>
+                </div>
+                <div class="tbh-app">
+                    <div class="apps">
+                        <h3>阿里APP</h3><a>更多&gt</a>
+                        <ul class="apps-nav">
+                            <li>
+                                <img src="./img/taobao_app_icon.jpg">
+                                <div>
+                                    <img src="./img/taobao_qr_code.jpg">
+                                    <span>扫一扫淘宝</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./img/tianmao.png">
+                                <div>
+                                    <img src="./img/taobao_qr_code.jpg">
+                                    <span>扫一扫天猫</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./img/juhuasuan.png">
+                                <div>
+                                    <img src="./img/taobao_qr_code.jpg">
+                                    <span>扫一扫聚划算</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./img/zhifubao.png">
+                                <div>
+                                    <img src="./img/taobao_qr_code.jpg">
+                                    <span>扫一扫支持宝</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./img/wangwang.png">
+                                <div>
+                                    <img src="./img/taobao_qr_code.jpg">
+                                    <span>扫一扫旺旺</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layer">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    <div class="footer"></div>
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script src="./js/notice.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/promo.js"></script>
+    <script src="./js/vue_carousel.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>

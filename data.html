@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul>li {
+            list-style: none;
+        }
+
+        .promo * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .promo {
+            position: relative;
+            display: block;
+            width: 520px;
+            cursor: pointer;
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .promo-bd {
+            position: absolute;
+            left: -520px;
+            top: 0;
+            display: block;
+            width: 3640px;
+            overflow: hidden;
+            font-size: 0;
+        }
+
+        .promo-bd>img {
+            width: 520px;
+            height: 280px;
+            display: inline-block;
+        }
+
+        .promo-ft {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .promo-ft::after {
+            content: "";
+            display: inline-block;
+            clear: both;
+        }
+
+        .promo-opt {
+            width: 520px;
+            line-height: 280px;
+        }
+
+        .promo-opt>a>span {
+            display: inline-block;
+            width: 20px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+            color: transparent;
+            font-weight: 400;
+            background-position: center;
+        }
+
+        .promo-opt>a:last-child>span {
+            border-radius: 0;
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%;
+            cursor: pointer;
+        }
+
+        .promo:hover .promo-opt>a>span {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .promo .promo-opt>a>span:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            background-position: center;
+            cursor: pointer;
+        }
+
+        .promo-opt>.prev {
+            float: left;
+        }
+
+        .promo-opt>.next {
+            float: right;
+        }
+
+        .promo-nav {
+            position: absolute;
+            bottom: 18px;
+            text-align: center;
+            width: 70px;
+            height: 13px;
+            line-height: 13px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 6px;
+            display: inline-block;
+            left: 225px;
+            cursor: default;
+            vertical-align: 0;
+        }
+
+        .promo-nav>li {
+            position: relative;
+            top: -2px;
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: white;
+            border-radius: 50%;
+            line-height: 13px;
+            cursor: pointer;
+        }
+
+        .promo-nav>li.selected {
+            background-color: #F50;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="promo">
+        <div class="promo-bd" style="position: absolute; left: -520px; top: 0;">
+            <img src="./img/image112.jpg">
+            <img src="./img/image113.jpg">
+            <img src="./img/image114.jpg">
+            <img src="./img/image115.jpg">
+            <img src="./img/image116.jpg">
+        </div>
+        <div class="promo-ft">
+            <div class="promo-opt">
+                <a class="prev">
+                    <span class="s-prev">&lt;</span>
+                </a>
+                <a class="next">
+                    <span class="s-next">&gt;</span>
+                </a>
+            </div>
+            <ul class="promo-nav">
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
+                <li class=""></li>
+            </ul>
+        </div>
+    </div>
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script>
+        // 轮播图参数对象
+        var config = {
+            imgWidth: 520,
+            curIndex: 1,
+            imgNumber: $('.promo-bd >img').length,
+            oConfig: this,
+            dom: {
+                imgs: $('.promo-bd'),
+                btn: $('.promo-opt'),
+                nav: $('.promo-nav'),
+                setImgsPosition: undefined
+            },
+            animate: {
+                id: null,
+                duration: 16,
+                total: 500,
+                complete: true,
+                stop: false
+            },
+            _debug: false
+        }
+
+        // 初始化
+        function init() {
+            var firstImg = $('.promo-bd>img').first();
+            var lastImg = $('.promo-bd>img').last();
+            firstImg.clone().insertAfter(lastImg);
+            lastImg.clone().insertBefore(firstImg);
+            setDotsStatus();
+            initImgsFun();
+            config.dom.setImgsPosition();
+            addEvent();
+        }
+
+        function initImgsFun() {
+            config.dom.setImgsPosition = function (x, y) {
+                x = (x || -config.curIndex * config.imgWidth) + 'px';
+                y = (y || 0) + 'px';
+                config.dom.imgs.css({
+                    'left': x,
+                    'top': y
+                });
+            }
+            config.dom.setImgsAnimate = function (x) {
+                var complete = config.animate.complete;
+                if (config._debug) console.log("animate complete " + complete);
+                if (!complete) {
+                    return;
+                } else {
+                    config.animate.complete = false;
+                }
+                var curIndex = config.curIndex;
+                if (config.curIndex < 1) {
+                    config.curIndex = config.imgNumber;
+                } else if (config.curIndex > config.imgNumber) {
+                    config.curIndex = 1;
+                }
+                setDotsStatus();
+                x = (x || -curIndex * config.imgWidth) + 'px';
+                config.dom.imgs.animate({
+                    'left': x
+                }, {
+                    'duration': config.animate.total,
+                    'complete': function () {
+                        if (config._debug) console.log('animate has complete');
+                        config.animate.complete = true;
+                        config.dom.setImgsPosition(getCorrectMarginLeft());
+                    }
+                });
+            }
+        }
+
+        // 设置导航点的状态
+        function setDotsStatus() {
+            config.dom.nav.find('li.selected').removeClass('selected');
+            config.dom.nav.find('li').eq(config.curIndex - 1).addClass('selected');
+        }
+
+        // 获取轮播图的真实位置
+        function getCorrectMarginLeft() {
+            var left = -config.curIndex * config.imgWidth
+            if (config._debug) console.log('left : ' + left);
+            return left;
+        }
+
+        // 轮播图切换图片
+        function switchTo(index, direction) {
+            if (config._debug) console.log('need stop ' + config.animate.stop);
+            if (index === config.curIndex) {
+                if (config._debug) console.log("curIndex not change");
+                return;
+            } else {
+                if (config._debug) console.log("curIndex change from " + config.curIndex + " to " + index);
+                config.curIndex = index;
+            }
+            setDotsStatus();
+            config.dom.setImgsAnimate(getCorrectMarginLeft());
+        }
+
+        // 绑定点击事件
+        function addEvent() {
+            // 绑定导航点的点击事件
+            config.dom.nav.on('click', 'li', function () {
+                if (!config.animate.complete) return;
+                var index = $(this).index() + 1;
+                var direction;
+                if (index < config.curIndex) {
+                    direction = 'left';
+                } else if (index > config.curIndex) {
+                    direction = 'right';
+                } else {
+                    direction = 'stop';
+                }
+                if (config._debug) console.log('click index : ' + index);
+                switchTo(index, direction);
+            });
+            // 绑定左右按钮事件
+            config.dom.btn.on('click', 'span', function () {
+                if (!config.animate.complete) return;
+                var index = config.curIndex;
+                if ($(this).hasClass('s-prev')) {
+                    index--;
+                } else {
+                    index++;
+                }
+                switchTo(index);
+            });
+            // 绑定暂停轮播事件
+            $('.promo').hover(function () {
+                config.animate.stop = true;
+            }, function () {
+                config.animate.stop = false;
+            });
+        }
+        (function () {
+            init();
+            autoPlay();
+        })();
+        // 自动轮播
+        function autoPlay() {
+            setInterval(function () {
+                if (!config.animate.stop) {
+                    switchTo(config.curIndex + 1);
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>
