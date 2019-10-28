@@ -1,47 +1,48 @@
 [
     {
         "id": 1,
-        "src": "./img/image057.png",
-        "src2": "./img/image059.gif",
+        "src": "./img3/image057.png",
+        "src2":"./img3/youhaohuo_code.png",
+        "src3": "./img3/image059.jpg",
         "title": "与品质生活不期而遇",
         "data": [
             {
-                "src1": "./img/image060.jpg",
+                "src1": "./img3/image060.jpg",
                 "title": "max破产都要买的口红",
                 "describe": "《破产姐妹》max最爱Tarte哑光口红笔",
                 "src2": "./img/xiaolian.png",
                 "other_text": "5965 人说好"
             },
             {
-                "src1": "./img/image061.jpg",
+                "src1": "./img3/image061.jpg",
                 "title": "窗台整理架，利用家中每一寸空间",
                 "describe": "简单易操作的设计，就算是女孩子一个人也完全没有问题。多种尺寸的选择，能满足不同空间与人群的使用需求。可伸缩的同时，移动起来也非常的方便，反复利用更环保。贴心人性化的围栏设计搭配优质耐用的选材，承重力杠杠滴且物品不易滑落，美观又实用。",
                 "src2": "./img/xiaolian.png",
                 "other_text": "338 人说好"
             },
             {
-                "src1": "./img/image062.jpg",
+                "src1": "./img3/image062.jpg",
                 "title": "北岸多功能上下床",
                 "describe": "充分的利用了房子的上下层空间，可同时满足休息与学习的双需求。",
                 "src2": "./img/xiaolian.png",
                 "other_text": "18203 人说好"
             },
             {
-                "src1": "./img/image063.jpg",
+                "src1": "./img3/image063.jpg",
                 "title": "“中国造”车睡神器，自驾游更轻松",
                 "describe": "一般的我们去旅行，自驾的时候酒店都爆满，带上车载折叠床，随时随地将后排升级为车载大床房。如果去前不着村后不着地的地方，更需要车载折叠床来休息了。安装简单，扎实牢固，安全贴心而且可以睡下不止一个人哦，不愧是车睡神器，有了它自驾游更轻松了。",
                 "src2": "./img/xiaolian.png",
                 "other_text": "18 人说好"
             },
             {
-                "src1": "./img/image064.jpg",
+                "src1": "./img3/image064.jpg",
                 "title": "SUSISU 幻境流沙眼影盘",
                 "describe": "幻境流沙，超级美腻外包装。",
                 "src2": "./img/xiaolian.png",
                 "other_text": "287 人说好"
             },
             {
-                "src1": "./img/image065.jpg",
+                "src1": "./img3/image065.jpg",
                 "title": "可折叠加厚双面使用榻榻米床垫",
                 "describe": "可以折叠的榻榻米床垫，收纳不占空间，正反两面都可以使用，同时纯棉材质舒适亲肤，透气性好，保持贴身换将干爽 不粘腻。",
                 "src2": "./img/xiaolian.png",
@@ -51,50 +52,50 @@
     },
     {
         "id": 2,
-        "src": "./img/image066.png",
+        "src": "./img3/image066.png",
         "src2": "",
         "title": "献给聪明可爱的你",
         "data": [
             {
-                "src1": "./img/image068.jpg",
+                "src1": "./img3/image068.jpg",
                 "title": "",
                 "describe": "个性铆钉翻领皮衣",
-                "src2": "./img/image069.jpg",
+                "src2": "./img3/image069.jpg",
                 "other_text": "美***a"
             },
             {
-                "src1": "./img/image070.jpg",
+                "src1": "./img3/image070.jpg",
                 "title": "",
                 "describe": "链条单肩小方包，简约百搭显气质",
-                "src2": "./img/image071.jpg",
+                "src2": "./img3/image071.jpg",
                 "other_text": "配***神"
             },
             {
-                "src1": "./img/image072.jpg",
+                "src1": "./img3/image072.jpg",
                 "title": "",
                 "describe": "磨砂马克杯，让温柔在指尖绽放。",
-                "src2": "./img/image073.jpg",
+                "src2": "./img3/image073.jpg",
                 "other_text": "意***居"
             },
             {
-                "src1": "./img/image074.jpg",
+                "src1": "./img3/image074.jpg",
                 "title": "",
                 "describe": "公司的年会，就指着这双小红鞋艳压全场了",
-                "src2": "./img/image075.jpg",
+                "src2": "./img3/image075.jpg",
                 "other_text": "仙***报"
             },
             {
-                "src1": "./img/image076.jpg",
+                "src1": "./img3/image076.jpg",
                 "title": "",
                 "describe": "羽绒沙发度过舒适自在的休闲时光",
-                "src2": "./img/image077.jpg",
+                "src2": "./img3/image077.jpg",
                 "other_text": "家***菌"
             },
             {
-                "src1": "./img/image078.jpg",
+                "src1": "./img3/image078.jpg",
                 "title": "",
                 "describe": "活力黄色连衣裙，轻松告别秋日沉闷",
-                "src2": "./img/image079.jpg",
+                "src2": "./img3/image079.jpg",
                 "other_text": "轻***调"
             }
         ]

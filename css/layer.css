@@ -1,0 +1,197 @@
+.layer {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+.layer-inner {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#youhaohuo,
+#aiguangjie {
+    position: relative;
+    width: 590px;
+    float: left;
+    height: 658px;
+    background-color: white;
+}
+
+#aiguangjie {
+    margin-left: 10px;
+}
+
+#youhaohuo>h3,
+#aiguangjie>h3 {
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#youhaohuo>h3>img,
+#aiguangjie>h3>img {
+    height: 24px;
+    margin-right: 5px;
+    vertical-align: -5px;
+}
+
+#youhaohuo>h3>span,
+#aiguangjie>h3>span {
+    position: relative;
+    display: inline-block;
+}
+
+.youhaohuo_qr_code>span:first-of-type {
+    width: 26px;
+    text-align: center;
+    height: 24px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    vertical-align: -6px;
+    display: inline-block;
+}
+
+.youhaohuo_qr_code:hover>span:last-of-type {
+    opacity: 1;
+    filter: alpha(opacity=1);
+    display: inline-block;
+}
+
+.youhaohuo_qr_code>span:nth-of-type(2) {
+    display: none;
+    position: absolute;
+    left: -17px;
+    top: 25px;
+    width: 66px;
+    height: 80px;
+    padding: 10px;
+    background: #fff;
+    z-index: 0;
+    border: 1px solid #f0f0f0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    background-size: 66px 66px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.youhaohuo_qr_code>span>em {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: 3px;
+    text-align: center;
+    color: #666;
+    font-weight: 400;
+    font-size: 12px;
+    font-style: normal;
+}
+
+.goods_list,
+.shopping_list {
+    background-color: white;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.goods_list>li,
+.shopping_list>li {
+    width: 180px;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0 4px 17px 0;
+    cursor: pointer;
+}
+
+.goods_list>li div,
+.shopping_list>li div {
+    width: 180px;
+}
+
+.goods_list>li>div>img,
+.shopping_list>li>div>img {
+    width: 180px;
+    height: 180px;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.goods_list>li:hover>div>img,
+.shopping_list>li:hover>div>img {
+    -webkit-filter: grayscale(50%);
+    /* Chrome, Safari, Opera */
+    filter: brightness(50%);
+}
+
+.goods_list>li>div:last-of-type,
+.shopping_list>li>div:last-of-type {
+    overflow: hidden;
+    padding: 0 4px 0 6px;
+    width: 180px;
+}
+
+.goods_list>li>div:last-of-type>h4 {
+    font-size: 16px;
+    height: 28px;
+    overflow: hidden;
+    line-height: 28px;
+    font-weight: normal;
+}
+
+.goods_list>li>div:last-of-type>p,
+.shopping_list>li>div:last-of-type>p {
+    line-height: 24px;
+    color: #999;
+    font-size: 14px;
+    overflow: hidden;
+    height: 24px;
+}
+
+.goods_list>li:hover>div:last-of-type>h4,
+.shopping_list>li:hover>div:last-of-type>p:first-of-type {
+    color: #F50;
+}
+
+.goods_list>li>div:last-of-type>p:last-of-type {
+    line-height: 22px;
+    height: 22px;
+    margin-top: 12px;
+    color: #35b1ff;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.shopping_list>li>div:last-of-type>p:last-of-type {
+    margin-left: 30px;
+    line-height: 22px;
+    font-size: 12px;
+    color: #999;
+    margin-top: 38.5px;
+}
+
+.goods_list>li>div:last-of-type>p:last-of-type>span {
+    width: 14px;
+    height: 22px;
+    display: inline-block;
+    background-size: 14px 14px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    vertical-align: -6px;
+    margin-right: 6px;
+}
+
+.shopping_list>li>div:last-of-type>p:last-of-type>span {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    background-size: 22px 22px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    vertical-align: -6px;
+    margin-right: 6px;
+    border-radius: 50%;
+}
+
+#aiguangjie {}

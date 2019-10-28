@@ -33,6 +33,7 @@
     height: 190px;
     overflow: hidden;
     margin-left: 6px;
+    cursor: pointer;
 }
 
 .slide-ul li:first-of-type>img {

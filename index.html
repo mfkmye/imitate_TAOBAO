@@ -19,6 +19,8 @@
     <!-- 主体2样式-->
     <script src="./js/vue.js"></script>
     <link rel="stylesheet" href="./css/vue_carousel.css">
+    <!-- layer1 -->
+    <link rel="stylesheet" href="./css/layer.css">
     <!-- 底部样式 -->
     <link rel="stylesheet" href="./css/footer.css">
 </head>
@@ -507,7 +509,59 @@
         </div>
     </div>
     <div class="layer">
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="layer-inner">
+            <div id="youhaohuo">
+                <h3>
+                    <img :src="src">
+                    <span class="youhaohuo_qr_code">
+                        <span :style="{ backgroundImage: 'url('+src2+')' }"></span>
+                        <span :style="{ backgroundImage: 'url(' +src3+')' }">
+                            <em>手机淘宝扫码</em>
+                        </span>
+                    </span>
+                    <span>{{title}}</span>
+                </h3>
+                <ul class="goods_list">
+                    <template v-for="(item, index) in data">
+                        <li :_key="index" :key="index">
+                            <div>
+                                <img :src="item.src1">
+                            </div>
+                            <div>
+                                <h4>{{item.title}}</h4>
+                                <p>{{item.describe}}</p>
+                                <p>
+                                    <span :style="{ backgroundImage: 'url(' +item.src2+')' }"></span>{{item.other_text}}
+                                </p>
+                            </div>
+
+                        </li>
+                    </template>
+                </ul>
+            </div>
+            <div id="aiguangjie">
+                <h3>
+                    <img :src="src">
+                    <span>{{title}}</span>
+                </h3>
+                <ul class="shopping_list">
+                    <template v-for="(item, index) in data">
+                        <li :_key="index" :key="index">
+                            <div>
+                                <img :src="item.src1">
+                            </div>
+                            <div>
+                                <p>{{item.describe}}</p>
+                                <p>
+                                    <span :style="{ backgroundImage: 'url(' +item.src2+')' }">
+                                    </span>{{item.other_text}}
+                                </p>
+                            </div>
+                        </li>
+                    </template>
+                </ul>
+            </div>
+        </div>
     </div>
     <div class="footer"></div>
     <script src="./js/jquery-3.4.1.js"></script>
@@ -515,6 +569,7 @@
     <script src="./js/data.js"></script>
     <script src="./js/promo.js"></script>
     <script src="./js/vue_carousel.js"></script>
+    <script src="./js/vue_youhaohuo.js"></script>
     <script>
     </script>
 </body>
