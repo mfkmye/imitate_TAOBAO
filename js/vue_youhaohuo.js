@@ -13,5 +13,5 @@ $.ajax({
         el: "#aiguangjie",
         data: data2
     });
-    console.log(youhaohuo.$data);
+    // console.log(youhaohuo.$data);
 });

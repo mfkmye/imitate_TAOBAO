@@ -106,7 +106,7 @@
 
 <body>
     <div class="carousel-wrap" id="carousel">
-        <transition-group tag="ul" :name="transition" class='slide-ul'>
+        <transition-group tag="ul" :name="transition" class="slide-ul">
             <li v-for="(item, index) in list" :key="index" :_key="index" v-show="index === currentIndex">
                 <template v-for="(item_2, index_2) in item.imgs">
                     <img :src="item_2" :key="`${index}_${index_2}`" :_key="`${index}_${index_2}`" />
@@ -166,7 +166,6 @@
                     this.currentIndex++
                     if (this.currentIndex > this.list.length - 1) {
                         this.currentIndex = 0
-
                     }
                 },
                 left: function () { //向左滑动
@@ -194,6 +193,7 @@
             }
         });
     </script>
+    <script src="./js/search.js"></script>
 </body>
 
 </html>

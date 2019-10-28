@@ -200,6 +200,7 @@
                                         <div class="camera"></div>
                                     </div>
                                 </form>
+                                <ul class="search_list"></ul>
                             </div>
                         </div>
                         <div class="bottom">
@@ -308,7 +309,7 @@
                         <div class="c_b">
                             <div class="carousel-wrap" id="carousel">
                                 <div>
-                                    <transition-group tag="ul" :name="transition" class='slide-ul'>
+                                    <transition-group tag="ul" :name="transition" class="slide-ul">
                                         <li v-for="(item, index) in list" :key="index" :_key="index"
                                             v-show="index === currentIndex">
                                             <template v-for="(item_2, index_2) in item.imgs">
@@ -565,6 +566,7 @@
     </div>
     <div class="footer"></div>
     <script src="./js/jquery-3.4.1.js"></script>
+    <script src="./js/search.js"></script>
     <script src="./js/notice.js"></script>
     <script src="./js/data.js"></script>
     <script src="./js/promo.js"></script>

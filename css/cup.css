@@ -144,6 +144,25 @@
     height: 36px;
 }
 
+.search-combox {
+    position: relative;
+}
+
+.search-list {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    border: 1px solid black;
+}
+
+.search-list li {
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+    height: 18px;
+    line-height: 18px;
+}
+
 .search_icon_box {
     position: relative;
     display: inline;
@@ -240,4 +259,22 @@
     background-repeat: repeat-x;
     cursor: pointer;
     outline: none;
+}
+
+.search_list_show {
+    background-color: white;
+    width: 554px;
+    border: 1px solid black;
+}
+
+.search_list_show>li {
+    font-size: 14px;
+    padding: 8px;
+    font-weight: 600;
+    display: block;
+    cursor: pointer;
+}
+
+.search_list_show>li:hover {
+    background-color: rgb(225, 225, 225);
 }
