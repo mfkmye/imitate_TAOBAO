@@ -1,0 +1,213 @@
+.layer>div {
+    margin-top: 10px;
+    background-color: white;
+}
+
+.layer>div::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#vue_layer h3 {
+    color: #ff9f00;
+    border-bottom: 1px solid #f4f4f4;
+    padding-left: 32px;
+    margin-top: 5px;
+    line-height: 48px;
+    font-size: 20px;
+    position: relative;
+}
+
+#vue_layer h3::before {
+    background: #ff9f00;
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 16px;
+    top: 16px;
+    left: 20px;
+}
+
+#vue_layer div.item {
+    float: left;
+    padding: 20px 20px 0 20px;
+    border: 1px solid transparent;
+    color: #6c6c6c;
+    width: 196px;
+    height: 312px;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: border-color 0.3s;
+    -moz-transition: border-color 0.3s;
+    -o-transition: border-color 0.3s;
+    transition: border-color 0.3s;
+    border-right-color: #f4f4f4;
+    border-bottom-color: #f4f4f4;
+    background-image: none;
+}
+
+#vue_layer div.item:hover {
+    border-color: #ff5000;
+}
+
+#vue_layer .item .img-wrapper {
+    width: 197px;
+    height: 197px;
+    overflow: hidden;
+    background: #4f4f4f;
+}
+
+#vue_layer .item .img-wrapper>img {
+    width: 100%;
+    height: 100%;
+}
+
+#vue_layer .item h4 {
+    margin-top: 7px;
+    line-height: 22px;
+    height: 44px;
+    font-size: 14px;
+    color: #666;
+    font-weight: normal;
+    transition: color 0.3s;
+    overflow: hidden;
+}
+
+#vue_layer .item h4 img {
+    height: 16px;
+    vertical-align: top;
+    margin-top: 3px;
+    margin-right: 2px;
+}
+
+#vue_layer .item .info {
+    margin-top: 22px;
+    height: 24px;
+    line-height: 24px;
+}
+
+#vue_layer .item .info .adHot {
+    float: left;
+    width: 0;
+    height: 18px;
+    margin-right: 8px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    position: relative;
+    -webkit-border-radius: 4px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 4px;
+    -moz-background-clip: padding;
+    border-radius: 4px;
+    background-clip: padding-box;
+}
+
+#vue_layer .item .info>.price {
+    float: left;
+    color: #F40;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+#vue_layer .item .info>.price>span:first-of-type {
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 9px;
+    margin-right: 2px;
+    font-family: "Microsoft Yahei";
+}
+
+#vue_layer .item .info .sales {
+    float: right;
+    color: #9ca0aa;
+    margin-top: 3px;
+}
+
+#vue_layer .item .item-more {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 236px;
+    height: 82px;
+    background: #FF5000;
+}
+
+#vue_layer .item:hover .item-more {
+    display: block;
+}
+
+#vue_layer .item .item-more>p:first-of-type {
+    margin: 0 auto;
+    width: 120px;
+    margin-top: 15px;
+    line-height: 32px;
+    height: 32px;
+    font-size: 18px;
+    font-weight: normal;
+    border-bottom: 1px solid #FE964A;
+    color: #fff;
+    text-align: center;
+}
+
+#vue_layer .item .item-more>p:last-of-type {
+    line-height: 22px;
+    font-size: 12px;
+    height: 22px;
+    color: #fff;
+    text-align: center;
+}
+
+#vue_layer>div>div::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#vue_layer>div::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#vue_layer .hotsale-ft {
+    height: 50px;
+    background: #f4f4f4;
+    position: relative;
+}
+
+#vue_layer .hotsale-ft>span {
+    position: absolute;
+    text-align: center;
+    color: #ccccd0;
+    left: 50%;
+    width: 84px;
+    line-height: 20px;
+    font-size: 18px;
+    margin-left: -42px;
+    font-style: normal;
+    top: 20px;
+}
+
+#vue_layer .hotsale-ft>span::before {
+    content: ' ';
+    position: absolute;
+    height: 0;
+    line-height: 0;
+    border-top: 1px solid #e6e6e6;
+    width: 60px;
+    top: 50%;
+    left: 70px;
+}
+
+#vue_layer .hotsale-ft>span::after {
+    content: ' ';
+    position: absolute;
+    height: 0;
+    line-height: 0;
+    border-top: 1px solid #e6e6e6;
+    width: 60px;
+    top: 50%;
+    right: 70px;
+}
